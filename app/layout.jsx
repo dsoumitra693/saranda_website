@@ -1,9 +1,9 @@
 import { Roboto } from "next/font/google";
 import localFont from "next/font/local";
+import Head from "next/head";
 import "./globals.css";
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -31,14 +31,16 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
   return (
     <html lang="en" className={`${roboto.variable} ${redwood.variable}`}>
+      <Head>
+        <link rel="preload" href="/images/lush-forest-back.webp" as="image" />
+        <link rel="preload" href="/images/lush-forest-front.webp" as="image" />
+        <link rel="preload" href="/fonts/Realwood Regular.otf" as="font" type="font/otf" crossOrigin="" />
+      </Head>
       <body>
         <Navbar />
-        {/* <div className="w-screen"> */}
-          {children}
-        {/* </div> */}
+        {children}
         <Footer />
       </body>
     </html>
