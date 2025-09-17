@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 @theme inline {
   --font-primary: var(--font-redwood);
   --font-secondary: var(--font-roboto);
