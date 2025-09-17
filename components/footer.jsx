@@ -66,7 +66,7 @@ const footerConfig = [
 
 export default function Footer() {
     return (
-        <div className="w-full h-auto min-h-[350px] b-0 absolute bg-primary flex flex-wrap items-start justify-center gap-6 pt-4 px-4 pb-8 md:gap-15 md:pt-2 md:px-2.5 md:h-[350px]">
+        <div className="w-full h-auto min-h-[350px] absolute bg-primary flex flex-wrap items-start justify-center gap-6 pt-4 px-4 pb-8 md:gap-15 md:pt-2 md:px-2.5 md:h-[350px]">
             {footerConfig.map((section, index) => (
                 <FooterLinkGroup key={index} {...section} />
             ))}
