@@ -4,6 +4,11 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+body {
+  /* background-color: var(--color-primary); */
+  min-height: 100vh;
+}
+
 @theme inline {
   --font-primary: var(--font-redwood);
   --font-secondary: var(--font-roboto);
@@ -14,12 +19,22 @@ body::-webkit-scrollbar {
     @apply font-secondary;
   }
 
-  h1, h2, h3, h4, h5, h6, button {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  button {
     @apply font-primary;
   }
 }
 
-@theme {
+h2 {
+  font-size: x-large;
+}
+
+@theme inline {
   --color-primary: oklch(0.4002 0.06 151.15);
   --color-secondary: oklch(0.9069 0.1869 102.87);
   --color-neutral-light: oklch(0.985 0 0);

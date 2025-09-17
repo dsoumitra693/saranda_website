@@ -1,6 +1,9 @@
 import { Roboto } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -28,10 +31,15 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en" className={`${roboto.variable} ${redwood.variable}`}>
       <body>
-        {children}
+        <Navbar />
+        <div className="w-screen h-screen justify-center items-center">
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );
