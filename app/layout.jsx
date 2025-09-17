@@ -36,9 +36,9 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${roboto.variable} ${redwood.variable}`}>
       <body>
         <Navbar />
-        <div className="w-screen h-screen justify-center items-center">
+        {/* <div className="w-screen"> */}
           {children}
-        </div>
+        {/* </div> */}
         <Footer />
       </body>
     </html>
