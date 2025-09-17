@@ -21,8 +21,8 @@ export default function Navbar() {
 
     const socialLinks = [
         { name: "WhatsApp", href: "/whatsapp" },
-        { name: "YouTube", href: "/youtube" },
-        { name: "Instagram", href: "/instagram" },
+        { name: "YouTube", href: "https://www.youtube.com/@saranda_iitm" },
+        { name: "Instagram", href: "https://www.instagram.com/iitm_saranda" },
     ];
     const navLinks = [
         { href: "/", label: "Home" },
