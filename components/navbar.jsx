@@ -169,7 +169,7 @@ export default function Navbar() {
                             />
                         </Link>
                     </div>
-                    <h1 className="text-primary font-bold text-2xl ml-3 md:hidden">
+                    <h1 className="text-primary font-bold text-2xl ml-3 md:hidden text-center vertical-align-middle mt-2">
                         Saranda House
                     </h1>
 
