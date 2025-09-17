@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
@@ -131,10 +133,10 @@ function ImageCard({ src, alt, title, subtitle }) {
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" >
         <div className="absolute bottom-0 w-full p-3 md:p-4 text-center">
-          <h3 className="text-lg md:text-2xl font-bold text-white whitespace-nowrap">
+          <h3 className="text-lg md:text-2xl font-bold text-white whitespace-nowrap tracking-wider">
             {title}
           </h3>
-          <h6 className="text-base md:text-xl text-white/90 whitespace-nowrap font-bold">
+          <h6 className="text-base md:text-xl text-white/90 whitespace-nowrap font-bold tracking-wider">
             {subtitle}
           </h6>
         </div>
