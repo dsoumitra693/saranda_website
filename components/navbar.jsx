@@ -153,8 +153,8 @@ export default function Navbar() {
     );
 
     return (
-        <header ref={navbarRef} className="sticky top-0 z-50 bg-transparent">
-            <nav className="container mx-auto px-4 py-3" aria-label="Main navigation">
+        <header ref={navbarRef} className="absolute top-0 z-50 bg-transparent w-screen">
+            <nav className="relative container mx-auto px-4 py-3" aria-label="Main navigation">
                 <div className="flex items-center justify-between">
                     {/* Logo Section */}
                     <div className="flex-shrink-0">
