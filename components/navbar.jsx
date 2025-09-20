@@ -20,9 +20,10 @@ export default function Navbar() {
     const dropdownTimeoutRef = useRef(null);
 
     const socialLinks = [
-        { name: "WhatsApp", href: "/whatsapp" },
-        { name: "YouTube", href: "https://www.youtube.com/@saranda_iitm" },
-        { name: "Instagram", href: "https://www.instagram.com/iitm_saranda" },
+        { name: "WhatsApp", href: "/whatsapp", icon: "/images/whatsapp.svg" },
+        { name: "YouTube", href: "https://www.youtube.com/@saranda_iitm", icon: "/images/youtube.svg" },
+        { name: "Instagram", href: "https://www.instagram.com/iitm_saranda", icon: "/images/instagram.svg" },
+        { name: "LinkedIn", href: "https://www.linkedin.com/company/saranda-iitm", icon: "/images/linkedin.svg" },
     ];
     const navLinks = [
         { href: "/", label: "Home" },
@@ -249,7 +250,10 @@ export default function Navbar() {
                             {isDropdownOpen && (
                                 <ul
                                     ref={dropdownRef}
-                                    className="absolute top-full left-0 mt-1 w-48 overflow-hidden rounded-lg shadow-lg bg-transparent z-20"
+                                    className="absolute top-full left-0 mt-1 w-48 overflow-hidden rounded-lg shadow-lg backdrop-blur-md bg-white/10 z-20"
+                                    style={{
+                                        backgroundColor: 'rgba(151, 164, 121, 0.8)',
+                                    }}
                                     onMouseEnter={handleDropdownOpen}
                                     onMouseLeave={handleDropdownClose}
                                 >
@@ -306,15 +310,24 @@ export default function Navbar() {
                     </button>
 
                     {/* Social Links Desktop */}
-                    <ul className="hidden lg:flex items-center space-x-4">
+                    <ul className="hidden lg:flex items-center space-x-3">
                         {socialLinks.map((link) => (
                             <li key={link.name}>
                                 <Link
                                     href={link.href}
-                                    className="text-secondary-cream hover:text-primary-light-lime transition-colors duration-200 font-normal text-sm"
+                                    className="group p-2 rounded-full hover:bg-primary-light-lime/10 transition-all duration-300 transform hover:scale-110"
                                     aria-label={`Visit our ${link.name} page`}
+                                    target={link.href.startsWith('http') ? '_blank' : '_self'}
+                                    rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                                 >
-                                    {link.name}
+                                    <Image
+                                        src={link.icon}
+                                        alt={`${link.name} icon`}
+                                        width={24}
+                                        height={24}
+                                        className="w-6 h-6 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300"
+                                        style={{ filter: 'brightness(0) saturate(100%) invert(21%) sepia(27%) saturate(812%) hue-rotate(88deg) brightness(95%) contrast(93%)' }}
+                                    />
                                 </Link>
                             </li>
                         ))}
@@ -388,6 +401,31 @@ export default function Navbar() {
                                 </li>
                             ))}
                         </ul>
+                    </li>
+                    
+                    {/* Mobile Social Links */}
+                    <li className="pt-4 border-t border-neutral-light/20">
+                        <div className="flex justify-center space-x-6">
+                            {socialLinks.map((link) => (
+                                <Link
+                                    key={link.name}
+                                    href={link.href}
+                                    className="p-3 rounded-full bg-white/20 hover:bg-white/30 transition-all duration-300 transform hover:scale-110 backdrop-blur-sm"
+                                    aria-label={`Visit our ${link.name} page`}
+                                    target={link.href.startsWith('http') ? '_blank' : '_self'}
+                                    rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                                >
+                                    <Image
+                                        src={link.icon}
+                                        alt={`${link.name} icon`}
+                                        width={20}
+                                        height={20}
+                                        className="w-5 h-5 transition-opacity duration-300"
+                                        style={{ filter: 'brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%)' }}
+                                    />
+                                </Link>
+                            ))}
+                        </div>
                     </li>
                 </ul>
             </nav>

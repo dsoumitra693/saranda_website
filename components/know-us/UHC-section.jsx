@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
 
@@ -27,6 +27,30 @@ const UHCConfig = [
 
 export default function UHCSection() {
   const containerRef = useRef(null);
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [cardsVisible, setCardsVisible] = useState(false);
+
+  useEffect(() => {
+    // Scroll animation observer
+    const scrollObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          setTimeout(() => setCardsVisible(true), 500);
+        }
+      },
+      { threshold: 0.1, rootMargin: '-50px' }
+    );
+
+    if (sectionRef.current) {
+      scrollObserver.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) scrollObserver.unobserve(sectionRef.current);
+    };
+  }, []);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -101,46 +125,67 @@ export default function UHCSection() {
   }, []);
 
   return (
-    <div className="w-full h-screen md:h-fit md:max-w-6xl flex flex-col justify-center items-center p-4 mt-10 md:mt-6 mx-auto mb-6">
-      <h1 className="text-2xl md:text-[35px] font-bold mb-4 md:mb-1 text-primary">
+    <div 
+      ref={sectionRef}
+      className="w-full h-screen md:h-fit md:max-w-6xl flex flex-col justify-center items-center p-4 mt-10 md:mt-6 mx-auto mb-6"
+    >
+      <h1 className={`text-2xl md:text-[35px] font-bold mb-4 md:mb-1 text-primary transition-all duration-1000 ease-out ${
+        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+      }`}>
         Upper House Council
       </h1>
       <div
         ref={containerRef}
-        className="flex flex-col md:flex-row w-full flex-1 md:min-h-[518px] rounded-lg md:overflow-hidden gap-3 md:gap-0"
+        className={`flex flex-col md:flex-row w-full flex-1 md:min-h-[518px] rounded-lg md:overflow-hidden gap-3 md:gap-0 transition-all duration-1200 ease-out delay-300 ${
+          cardsVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+        }`}
       >
         {UHCConfig.map((uhc, index) => (
-          <ImageCard key={index} {...uhc} />
+          <ImageCard 
+            key={index} 
+            {...uhc} 
+            index={index}
+            isVisible={cardsVisible}
+          />
         ))}
       </div>
     </div>
   );
 }
 
-function ImageCard({ src, alt, title, subtitle }) {
+function ImageCard({ src, alt, title, subtitle, index, isVisible }) {
   return (
     <div
       role="img"
       aria-label={`${title}: ${subtitle}`}
-      className="image-card rounded-lg md:rounded-[0px] relative w-full flex-1 md:aspect-auto md:h-[518px] md:flex-1 overflow-hidden flex flex-col items-center bg-primary-dark shadow-lg cursor-pointer"
+      className={`image-card group rounded-lg md:rounded-[0px] relative w-full flex-1 md:aspect-auto md:h-[518px] md:flex-1 overflow-hidden flex flex-col items-center bg-primary-dark shadow-lg cursor-pointer transition-all duration-700 ease-out ${
+        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+      }`}
+      style={{ 
+        transitionDelay: `${200 + (index * 200)}ms` 
+      }}
     >
       <Image
         src={src}
         alt={alt}
         layout="fill"
         objectFit="cover"
-        className="w-full h-full transition-transform duration-500"
+        className="w-full h-full transition-all duration-700 ease-out group-hover:scale-110"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" >
-        <div className="absolute bottom-0 w-full p-3 md:p-4 text-center">
-          <h3 className="text-lg md:text-2xl font-bold text-white whitespace-nowrap tracking-wider">
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/80 group-hover:via-black/40 transition-all duration-500">
+        <div className="absolute bottom-0 w-full p-3 md:p-4 text-center transform transition-all duration-500 group-hover:translate-y-[-8px]">
+          <h3 className="text-lg md:text-2xl font-bold text-white whitespace-nowrap tracking-wider transform transition-all duration-500 group-hover:scale-105 group-hover:text-yellow-200">
             {title}
           </h3>
-          <h6 className="text-base md:text-xl text-white/90 whitespace-nowrap font-bold tracking-wider">
+          <h6 className="text-base md:text-xl text-white/90 whitespace-nowrap font-bold tracking-wider transform transition-all duration-500 delay-75 group-hover:text-white group-hover:translate-x-1">
             {subtitle}
           </h6>
+          <div className="mt-2 w-0 group-hover:w-12 h-0.5 bg-yellow-400 mx-auto transition-all duration-500 delay-100"></div>
         </div>
       </div>
+      
+      {/* Decorative corner accent */}
+      <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-yellow-400/0 group-hover:border-yellow-400/60 transition-all duration-500 delay-200"></div>
     </div>
   );
 }
