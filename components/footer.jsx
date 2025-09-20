@@ -78,7 +78,7 @@ export default function Footer() {
 export const FooterLink = ({ src, title }) => {
     return (
         <Link href={src}>
-            <p className="text-neutral-light text-sm font-medium hover:text-secondary transition-all duration-200 py-1 text-center md:text-left md:text-[14px] md:hover:text-[16px]">
+            <p className="text-neutral-light text-sm font-medium hover:text-secondary transition-colors duration-300 py-1 text-center md:text-left md:text-[14px]">
                 {title}
             </p>
         </Link>
@@ -90,14 +90,14 @@ export const FooterIconLink = ({ src, icon, alt, size }) => {
     return (
         <Link 
             href={src} 
-            className="hover:opacity-90 transition-all duration-300 ease-in-out transform hover:scale-125 hover:shadow-lg hover:shadow-primary-lime/50 rounded-full"
+            className="hover:opacity-75 transition-opacity duration-300 ease-in-out rounded-full"
         >
             <Image 
                 src={icon} 
                 alt={alt} 
                 width={size ?? 32} 
                 height={size ?? 32}
-                className="hover:animate-pulse transition-all duration-300"
+                className="transition-opacity duration-300"
             />
         </Link>
     );
