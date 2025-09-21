@@ -11,16 +11,6 @@ export default function HeroSection() {
                 backgroundRepeat: "no-repeat",
             }}
         >
-            
-            <div
-                className="pointer-events-none absolute inset-0 z-10"
-                style={{
-                    backgroundImage: 'url("/images/lush-forest-front.png")',
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                }}
-            />
         </div>
     );
 }
