@@ -1,9 +1,7 @@
 "use client";
 
-import { useEffect, useState } from 'react';
-import DelhiMeetup from '../../components/meetups/DelhiMeetup';
-import MumbaiMeetup from '../../components/meetups/MumbaiMeetup';
-import AmritsarMeetup from '../../components/meetups/AmritsarMeetup';
+import MeetupCard from '../../components/meetups/MeetupCard';
+import { meetupSections } from '../../components/meetups/meetupConfig';
 
 export default function MeetupsPage() {
   return (
@@ -42,15 +40,14 @@ export default function MeetupsPage() {
         
         {/* Meetups Section */}
         <div className="relative z-10 pb-20">
-          <div className="container mx-auto px-6 space-y-8">
-            {/* Delhi Meetup */}
-            <DelhiMeetup />
-            
-            {/* Mumbai Meetup */}
-            <MumbaiMeetup />
-            
-            {/* Amritsar Meetup */}
-            <AmritsarMeetup />
+          <div className="container mx-auto px-6 space-y-12">
+            {/* Render upcoming and past meetups using config */}
+            {meetupSections.map((section) => (
+              <MeetupCard 
+                key={section.id} 
+                config={section} 
+              />
+            ))}
           </div>
         </div>
       </div>
