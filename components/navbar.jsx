@@ -348,6 +348,7 @@ export default function Navbar() {
                         <li key={link.label}>
                             <Link
                                 href={link.href}
+                                onClick={() => setMobileMenuOpen(false)}
                                 className="block px-4 py-2 rounded-md text-primary-dark font-normal text-white"
                             >
                                 <h2 className="relative z-10 font-[36px]">{link.label}</h2>
