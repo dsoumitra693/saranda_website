@@ -150,30 +150,28 @@ export default function LHCSection() {
     }, []);
 
     return (
-        <div 
+        <div
             ref={componentRef}
             className="w-full min-h-screen lg:min-h-fit max-w-7xl flex flex-col justify-start lg:justify-center items-center p-4 sm:p-6 lg:p-8 mt-6 sm:mt-8 lg:mt-10 mx-auto mb-6 sm:mb-8 lg:mb-10"
         >
-            <h1 className={`text-xl sm:text-2xl md:text-3xl lg:text-[32px] xl:text-[35px] font-bold mb-6 sm:mb-8 lg:mb-10 text-neutral-dark text-center leading-tight transform transition-all duration-600 ease-out ${
-                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
-            }`}>
-                Lower House Council
-            </h1>
-            
+            <div className="relative z-10 pt-16">
+                <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6 transform transition-all duration-1000 ease-out">
+                    Lower House Council
+                </h1>
+            </div>
+
             <div className="w-full space-y-6 sm:space-y-8 lg:space-y-10">
-                <div 
+                <div
                     ref={el => sectionRefs.current[0] = el}
-                    className={`transform transition-all duration-600 ease-out delay-100 ${
-                        sectionsVisible[0] ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                    }`}
+                    className={`transform transition-all duration-600 ease-out delay-100 ${sectionsVisible[0] ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                        }`}
                 >
                     <CouncilSection {...RCConfig} />
                 </div>
-                <div 
+                <div
                     ref={el => sectionRefs.current[1] = el}
-                    className={`transform transition-all duration-600 ease-out delay-200 ${
-                        sectionsVisible[1] ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                    }`}
+                    className={`transform transition-all duration-600 ease-out delay-200 ${sectionsVisible[1] ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                        }`}
                 >
                     <CouncilSection {...WebOpsConfig} />
                 </div>

@@ -125,25 +125,24 @@ export default function UHCSection() {
   }, []);
 
   return (
-    <div 
+    <div
       ref={sectionRef}
       className="w-full h-screen md:h-fit md:max-w-6xl flex flex-col justify-center items-center p-4 mt-10 md:mt-6 mx-auto mb-6"
     >
-      <h1 className={`text-2xl md:text-[35px] font-bold mb-4 md:mb-1 text-primary transition-all duration-1000 ease-out ${
-        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-      }`}>
-        Upper House Council
-      </h1>
+      <div className="relative z-10 pt-16">
+        <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6 transform transition-all duration-1000 ease-out">
+          Upper House Council
+        </h1>
+      </div>
       <div
         ref={containerRef}
-        className={`flex flex-col md:flex-row w-full flex-1 md:min-h-[518px] rounded-lg md:overflow-hidden gap-3 md:gap-0 transition-all duration-1200 ease-out delay-300 ${
-          cardsVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
-        }`}
+        className={`flex flex-col md:flex-row w-full flex-1 md:min-h-[518px] rounded-lg md:overflow-hidden gap-3 md:gap-0 transition-all duration-1200 ease-out delay-300 ${cardsVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+          }`}
       >
         {UHCConfig.map((uhc, index) => (
-          <ImageCard 
-            key={index} 
-            {...uhc} 
+          <ImageCard
+            key={index}
+            {...uhc}
             index={index}
             isVisible={cardsVisible}
           />
@@ -158,11 +157,10 @@ function ImageCard({ src, alt, title, subtitle, index, isVisible }) {
     <div
       role="img"
       aria-label={`${title}: ${subtitle}`}
-      className={`image-card group rounded-lg md:rounded-[0px] relative w-full flex-1 md:aspect-auto md:h-[518px] md:flex-1 overflow-hidden flex flex-col items-center bg-primary-dark shadow-lg cursor-pointer transition-all duration-700 ease-out ${
-        isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-      }`}
-      style={{ 
-        transitionDelay: `${200 + (index * 200)}ms` 
+      className={`image-card group rounded-lg md:rounded-[0px] relative w-full flex-1 md:aspect-auto md:h-[518px] md:flex-1 overflow-hidden flex flex-col items-center bg-primary-dark shadow-lg cursor-pointer transition-all duration-700 ease-out ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+        }`}
+      style={{
+        transitionDelay: `${200 + (index * 200)}ms`
       }}
     >
       <Image
@@ -183,7 +181,7 @@ function ImageCard({ src, alt, title, subtitle, index, isVisible }) {
           <div className="mt-2 w-0 group-hover:w-12 h-0.5 bg-yellow-400 mx-auto transition-all duration-500 delay-100"></div>
         </div>
       </div>
-      
+
       {/* Decorative corner accent */}
       <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-yellow-400/0 group-hover:border-yellow-400/60 transition-all duration-500 delay-200"></div>
     </div>
