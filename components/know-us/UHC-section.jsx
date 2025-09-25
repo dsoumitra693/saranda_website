@@ -35,7 +35,6 @@ export default function UHCSection() {
   useEffect(() => {
     // Trigger header animation on mount
     setTimeout(() => setHeaderVisible(true), 200);
-
     // Scroll animation observer
     const scrollObserver = new IntersectionObserver(
       ([entry]) => {
@@ -167,6 +166,7 @@ export default function UHCSection() {
                   }
                 }
       `}</style>
+
     </div>
   );
 }

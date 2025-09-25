@@ -121,7 +121,6 @@ export default function LHCSection() {
             observer.observe(componentRef.current);
         }
 
-        // Observer for individual sections
         const sectionObserver = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {

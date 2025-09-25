@@ -7,6 +7,7 @@ import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import { usePathname } from 'next/navigation';
 
+
 const roboto = Roboto({
   subsets: ["latin"],
   fallback: ["Helvetica", "Arial", "sans-serif"],
