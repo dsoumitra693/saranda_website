@@ -100,10 +100,14 @@ const WebOpsConfig = {
 export default function LHCSection() {
     const [isVisible, setIsVisible] = useState(false);
     const [sectionsVisible, setSectionsVisible] = useState([false, false]);
+    const [headerVisible, setHeaderVisible] = useState(false);
     const componentRef = useRef(null);
     const sectionRefs = useRef([]);
 
     useEffect(() => {
+        // Trigger header animation on mount
+        setTimeout(() => setHeaderVisible(true), 200);
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -117,7 +121,6 @@ export default function LHCSection() {
             observer.observe(componentRef.current);
         }
 
-        // Observer for individual sections - more responsive
         const sectionObserver = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -150,30 +153,36 @@ export default function LHCSection() {
     }, []);
 
     return (
-        <div 
+        <div
             ref={componentRef}
             className="w-full min-h-screen lg:min-h-fit max-w-7xl flex flex-col justify-start lg:justify-center items-center p-4 sm:p-6 lg:p-8 mt-6 sm:mt-8 lg:mt-10 mx-auto mb-6 sm:mb-8 lg:mb-10"
         >
-            <h1 className={`text-xl sm:text-2xl md:text-3xl lg:text-[32px] xl:text-[35px] font-bold mb-6 sm:mb-8 lg:mb-10 text-neutral-dark text-center leading-tight transform transition-all duration-600 ease-out ${
-                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
-            }`}>
-                Lower House Council
-            </h1>
-            
+            <div className="relative z-10 pt-16 text-center mb-12">
+                <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 transform transition-all duration-1200 ease-out relative ${
+                    headerVisible 
+                        ? 'translate-y-0 opacity-100 scale-100' 
+                        : 'translate-y-8 opacity-0 scale-95'
+                }`}
+                style={{
+                    backgroundSize: '200% auto',
+                    animation: headerVisible ? 'gradientShift 3s ease-in-out infinite alternate' : 'none'
+                }}>
+                    Lower House Council
+                </h1>
+            </div>
+
             <div className="w-full space-y-6 sm:space-y-8 lg:space-y-10">
-                <div 
+                <div
                     ref={el => sectionRefs.current[0] = el}
-                    className={`transform transition-all duration-600 ease-out delay-100 ${
-                        sectionsVisible[0] ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                    }`}
+                    className={`transform transition-all duration-600 ease-out delay-100 ${sectionsVisible[0] ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                        }`}
                 >
                     <CouncilSection {...RCConfig} />
                 </div>
-                <div 
+                <div
                     ref={el => sectionRefs.current[1] = el}
-                    className={`transform transition-all duration-600 ease-out delay-200 ${
-                        sectionsVisible[1] ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                    }`}
+                    className={`transform transition-all duration-600 ease-out delay-200 ${sectionsVisible[1] ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                        }`}
                 >
                     <CouncilSection {...WebOpsConfig} />
                 </div>

@@ -4,6 +4,7 @@ import AboutSection from "@/components/ui/AboutSection";
 import FeaturedSection from "@/components/ui/FeaturedSection";
 import CommunitiesSection from "@/components/ui/CommunitiesSection";
 
+
 export default function Home() {
   return <>
     <HeroSection />

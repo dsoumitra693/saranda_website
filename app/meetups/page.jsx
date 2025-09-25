@@ -31,7 +31,7 @@ export default function MeetupsPage() {
         <div className="relative z-10 pt-24 pb-12">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-serif animate-fade-in-up">
+              <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6 transform transition-all duration-1000 ease-out">
                 Meet Ups
               </h1>
             </div>
