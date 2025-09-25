@@ -1,8 +1,8 @@
 import HeroSection from "@/components/home/hero-section";
-import LandingPageSections from "@/components/ui/LandingPageSections";
-import AboutSection from "@/components/ui/AboutSection";
-import FeaturedSection from "@/components/ui/FeaturedSection";
-import CommunitiesSection from "@/components/ui/CommunitiesSection";
+import LandingPageSections from "@/components/home/LandingPageSections";
+import AboutSection from "@/components/home/AboutSection";
+import FeaturedSection from "@/components/home/FeaturedSection";
+import CommunitiesSection from "@/components/home/CommunitiesSection";
 
 
 export default function Home() {

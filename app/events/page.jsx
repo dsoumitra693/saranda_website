@@ -17,6 +17,7 @@ export default function Events() {
     <>
       <div
         className="w-full min-h-screen bg-primary flex flex-col pt-[60px] md:pt-[80px] pb-[30px] relative"
+        style={{
           backgroundImage: 'url("/images/mist-forest1.png")',
           backgroundSize: "cover",
           backgroundPosition: "center",
