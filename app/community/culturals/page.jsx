@@ -1,6 +1,15 @@
-export default function Home() {
-  return <>
-    <h1>Saranda Website</h1>
-    <p>Comming Soon</p>
-  </>;
+export default function Page() {
+  return <div className="w-full min-h-screen bg-primary flex justify-center items-center"
+    style={{
+      backgroundImage: 'url("/images/mist-forest1.png")',
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundAttachment: "fixed",
+    }}>
+      <div className="w-full h-full justify-center items-center text-center">
+        <h1 className="text-6xl">Cultural Community</h1>
+        <h5 className="text-2xl">Comming Soon</h5>
+      </div>
+  </div>
 }

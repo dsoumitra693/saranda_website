@@ -1,5 +1,5 @@
 import Image from "next/image";
-import mist_forest_img from "@/public/images/mist_forest2.png";
+import mist_forest_img from "@/public/images/mist-forest2.png";
 import lone_tree_img from "@/public/images/lone_tree.png";
 import { LandingPageSectionsBgAnimation } from "@/components/gsapanimations/LandingPageBgAnimations";
 
