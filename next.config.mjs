@@ -1,19 +1,19 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        remotePatterns: [
-            {
-                protocol: "https",
-                hostname: "images.pexels.com",
-            },
-            {
-                protocol: "https",
-                hostname: "placehold.co",
-                port: "",
-                pathname: "/**",
-            },
-        ],
+    turbopack: {
+      // any needed aliases or rules, e.g.:
+      resolveAlias: {
+        underscore: 'lodash',
+      },
+      resolveExtensions: ['.mdx', '.tsx', '.ts', '.jsx', '.js', '.json'],
     },
-};
-
-export default nextConfig;
+    images: {
+      remotePatterns: [
+        { protocol: "https", hostname: "images.pexels.com" },
+        { protocol: "https", hostname: "placehold.co", port: "", pathname: "/**" },
+      ],
+    },
+  };
+  
+  export default nextConfig;
+  
