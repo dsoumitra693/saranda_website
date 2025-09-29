@@ -57,9 +57,9 @@ const footerConfig = [
     {
         title: "Useful links",
         links: [
-            { title: "Student Handbook", src: "/student-handbook" },
-            { title: "Grading Document", src: "/grading-document" },
-            { title: "Score-Checker", src: "/score-checker" }
+            { title: "Student Handbook", src: "https://docs.google.com/document/u/1/d/e/2PACX-1vRxGnnDCVAO3KX2CGtMIcJQuDrAasVk2JHbDxkjsGrTP5ShhZK8N6ZSPX89lexKx86QPAUswSzGLsOA/pub" },
+            { title: "Grading Document", src: "https://docs.google.com/document/u/1/d/e/2PACX-1vSBP6TJyZDklGPMyRtTwQc1cWZKOrozsOy5qmBwB8awTFvBbPN33-IxUV2WYupNdlXQOCgKwV9fDQKq/pub?urp=gmail_link#h.mq6va7imuzk" },
+            { title: "Score-Checker", src: "https://score-checker-379619009600.asia-south1.run.app" }
         ]
     }
 ]
