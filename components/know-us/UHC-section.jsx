@@ -4,28 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
 
-const UHCConfig = [
-  {
-    src: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg",
-    alt: "UHC 1",
-    title: "Secretary",
-    subtitle: "Pranjal",
-  },
-  {
-    src: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg",
-    alt: "UHC 2",
-    title: "Dept Secretary",
-    subtitle: "Vedant",
-  },
-  {
-    src: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg",
-    alt: "UHC 3",
-    title: "Web Admin",
-    subtitle: "Spiderman",
-  },
-];
-
-export default function UHCSection() {
+export default function UHCSection({ members }) {
   const containerRef = useRef(null);
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -149,7 +128,7 @@ export default function UHCSection() {
         className={`flex flex-col sm:flex-row w-full flex-1 min-h-[518px] rounded-lg overflow-hidden gap-3 sm:gap-0 transition-all duration-1200 ease-out delay-300 ${cardsVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
           }`}
       >
-        {UHCConfig.map((uhc, index) => (
+        {members.map((uhc, index) => (
           <ImageCard
             key={index}
             {...uhc}
@@ -171,7 +150,7 @@ export default function UHCSection() {
   );
 }
 
-function ImageCard({ src, alt, title, subtitle, index, isVisible }) {
+function ImageCard({ image, alt, title, subtitle, index, isVisible }) {
   return (
     <div
       role="img"
@@ -184,8 +163,8 @@ function ImageCard({ src, alt, title, subtitle, index, isVisible }) {
     >
       {/* Updated Image with proper responsive handling */}
       <Image
-        src={src}
-        alt={alt}
+        src={image}
+        alt={alt ?? title}
         fill
         sizes="(max-width: 640px) 100vw, 33vw"
         className="object-cover transition-all duration-700 ease-out group-hover:scale-110"
