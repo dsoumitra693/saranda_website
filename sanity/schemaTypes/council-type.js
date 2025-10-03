@@ -1,4 +1,4 @@
-// schemas/upperHouseCouncil.js
+// schemas/upperHouseCouncil
 export const uhcMembers = {
     name: 'uhcMember',
     title: 'UHC Member',
@@ -29,7 +29,7 @@ export const uhcMembers = {
 }
 
 
-// schemas/regionalCoordinator.js
+// schemas/regionalCoordinator
 export const rcMembers = {
     name: 'rcMember',
     title: 'RC Member',
@@ -59,7 +59,7 @@ export const rcMembers = {
     ]
 }
 
-// schemas/webopsTeam.js
+// schemas/webopsTeam
 export const webopsMembers = {
     name: 'webopsMember',
     title: 'WebOps Member',

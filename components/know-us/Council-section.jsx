@@ -102,7 +102,7 @@ function ProfileCard({ title, subtitle, image }) {
         <h4 className="text-xs md:text-sm lg:text-base font-semibold text-primary tracking-wide leading-tight group-hover:text-primary-dark transition-colors duration-300">
           {title}
         </h4>
-        <h6 className="text-xs md:text-sm text-primary/90 font-bold tracking-wider mt-1 group-hover:text-primary transition-colors duration-300">
+        <h6 className="text-xs md:text-sm text-primary/90   tracking-wider mt-1 group-hover:text-primary transition-colors duration-300">
           [{subtitle}]
         </h6>
       </div>

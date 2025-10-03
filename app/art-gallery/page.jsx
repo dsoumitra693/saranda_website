@@ -24,7 +24,7 @@ export default function ArtGallery() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <h1 className="text-3xl font-bold text-green-900 mb-6 pt-20 relative z-10 ">Art Gallery</h1>
+      <h1 className="text-3xl   text-green-900 mb-6 pt-20 relative z-10 ">Art Gallery</h1>
 
       {/* Grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl z-10 relative">

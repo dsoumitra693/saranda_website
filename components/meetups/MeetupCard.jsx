@@ -52,7 +52,7 @@ export default function MeetupCard({ config }) {
       }}
     >
       {/* Title */}
-      <h2 className={`text-3xl font-bold text-white mb-2 transform transition-all duration-700 delay-200 ${
+      <h2 className={`text-3xl   text-white mb-2 transform transition-all duration-700 delay-200 ${
         animationPhase >= 1 ? 'translate-x-0 opacity-100' : '-translate-x-8 opacity-0'
       }`}>
         {config.title}

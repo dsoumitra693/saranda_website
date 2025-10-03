@@ -106,7 +106,7 @@ export const FooterIconLink = ({ src, icon, alt, size }) => {
 export const FooterLinkGroup = ({ title, links, iconLinks, otherIcons }) => {
     return (
         <div className="flex flex-col items-start justify-start w-full pb-8 pt-2 md:w-[25%] md:items-start md:mb-0">
-            <h3 className="text-neutral-light text-xl font-bold mb-4 text-center md:text-left md:text-2xl">
+            <h3 className="text-neutral-light text-xl   mb-4 text-center md:text-left md:text-2xl">
                 {title}
             </h3>
 

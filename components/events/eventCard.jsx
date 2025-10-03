@@ -78,7 +78,7 @@ export default function EventCard({
       {/* Right Section - Text & Buttons with staggered animations */}
       <div className="w-auto px-[15px] sm:w-4/6 text-white pt-3">
         {/* Title Animation */}
-        <h3 className={`text-xl md:text-2xl lg:text-4xl font-bold transform transition-all duration-700 delay-300 ${
+        <h3 className={`text-xl md:text-2xl lg:text-4xl   transform transition-all duration-700 delay-300 ${
           animationPhase >= 1 ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
         }`}>
           {title}
