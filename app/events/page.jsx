@@ -39,7 +39,7 @@ export default function Events() {
 
         {/* Animated Header */}
         <div className="relative z-10 text-center mb-16 pt-10">
-          <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 transform transition-all duration-1000 ease-out ${
+          <h1 className={`text-4xl md:text-5xl lg:text-6xl   text-primary mb-6 transform transition-all duration-1000 ease-out ${
             headerVisible 
               ? 'translate-y-0 opacity-100 scale-100' 
               : 'translate-y-12 opacity-0 scale-90'

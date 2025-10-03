@@ -158,7 +158,7 @@ export default function LHCSection() {
             className="w-full min-h-screen lg:min-h-fit max-w-7xl flex flex-col justify-start lg:justify-center items-center p-4 sm:p-6 lg:p-8 mt-6 sm:mt-8 lg:mt-10 mx-auto mb-6 sm:mb-8 lg:mb-10"
         >
             <div className="relative z-10 pt-16 text-center mb-12">
-                <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 transform transition-all duration-1200 ease-out relative ${
+                <h1 className={`text-4xl md:text-5xl lg:text-6xl   text-primary mb-6 transform transition-all duration-1200 ease-out relative ${
                     headerVisible 
                         ? 'translate-y-0 opacity-100 scale-100' 
                         : 'translate-y-8 opacity-0 scale-95'

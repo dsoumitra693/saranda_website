@@ -32,7 +32,7 @@ export default function HeroSection() {
                 <div className="max-w-4xl mx-auto relative z-20 pt-20 flex flex-col items-center">
                     <span
                         ref={sarandaRef}
-                        className="text-primary text-7xl sm:text-8xl md:text-9xl font-bold text-primary-dark mb-4 overflow-visible tracking-wider"
+                        className="text-primary text-7xl sm:text-8xl md:text-9xl text-primary-dark mb-4 overflow-visible tracking-wider"
                         aria-label="Saranda"
                     >
                         <h1>

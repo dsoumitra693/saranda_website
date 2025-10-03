@@ -133,7 +133,7 @@ export default function UHCSection() {
       className="w-full h-screen md:h-fit md:max-w-6xl flex flex-col justify-center items-center p-4 mt-10 md:mt-6 mx-auto mb-6"
     >
       <div className="relative z-10 pt-16 text-center mb-12">
-        <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 transform transition-all duration-1200 ease-out relative ${headerVisible
+        <h1 className={`text-4xl md:text-5xl lg:text-6xl   text-primary mb-6 transform transition-all duration-1200 ease-out relative ${headerVisible
           ? 'translate-y-0 opacity-100 scale-100'
           : 'translate-y-8 opacity-0 scale-95'
           }`}
@@ -195,10 +195,10 @@ function ImageCard({ src, alt, title, subtitle, index, isVisible }) {
       {/* Rest of overlay content remains the same */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent group-hover:from-black/80 group-hover:via-black/40 transition-all duration-500">
         <div className="absolute bottom-4 sm:bottom-10 w-full p-3 sm:p-4 text-center transform transition-all duration-500 group-hover:translate-y-[-8px]">
-          <h3 className="text-base sm:text-lg md:text-2xl font-bold text-white tracking-wider transform transition-all duration-500 group-hover:scale-105 group-hover:text-yellow-200 break-words">
+          <h3 className="text-base sm:text-lg md:text-2xl   text-white tracking-wider transform transition-all duration-500 group-hover:scale-105 group-hover:text-yellow-200 break-words">
             {title}
           </h3>
-          <h6 className="text-sm sm:text-base md:text-xl text-white/90 font-bold tracking-wider transform transition-all duration-500 delay-75 group-hover:text-white group-hover:translate-x-1 break-words mt-1">
+          <h6 className="text-sm sm:text-base md:text-xl text-white/90   tracking-wider transform transition-all duration-500 delay-75 group-hover:text-white group-hover:translate-x-1 break-words mt-1">
             {subtitle}
           </h6>
           <div className="mt-2 w-0 group-hover:w-8 sm:group-hover:w-12 h-0.5 bg-yellow-400 mx-auto transition-all duration-500 delay-100"></div>

@@ -16,7 +16,7 @@ export const meetupSections = [
         content: (
           <div>
             <div className="text-xs mb-1">MUMBAI</div>
-            <div className="text-sm font-bold">OCT 15, 2025</div>
+            <div className="text-sm  ">OCT 15, 2025</div>
             <div className="text-xs mt-1">Marine Drive</div>
           </div>
         )
@@ -26,7 +26,7 @@ export const meetupSections = [
         content: (
           <div>
             <div className="text-xs mb-1">DELHI NCR</div>
-            <div className="text-sm font-bold">NOV 2, 2025</div>
+            <div className="text-sm  ">NOV 2, 2025</div>
             <div className="text-xs mt-1">India Gate</div>
           </div>
         )
@@ -36,7 +36,7 @@ export const meetupSections = [
         content: (
           <div>
             <div className="text-xs mb-1">BANGALORE</div>
-            <div className="text-sm font-bold">NOV 18, 2025</div>
+            <div className="text-sm  ">NOV 18, 2025</div>
             <div className="text-xs mt-1">Tech Hub</div>
           </div>
         )
@@ -46,7 +46,7 @@ export const meetupSections = [
         content: (
           <div>
             <div className="text-xs mb-1">PUNE</div>
-            <div className="text-sm font-bold">DEC 5, 2025</div>
+            <div className="text-sm  ">DEC 5, 2025</div>
             <div className="text-xs mt-1">Cultural Center</div>
           </div>
         )
@@ -56,7 +56,7 @@ export const meetupSections = [
         content: (
           <div>
             <div className="text-xs mb-1">HYDERABAD</div>
-            <div className="text-sm font-bold">DEC 20, 2025</div>
+            <div className="text-sm  ">DEC 20, 2025</div>
             <div className="text-xs mt-1">HITEC City</div>
           </div>
         )
@@ -66,7 +66,7 @@ export const meetupSections = [
         content: (
           <div>
             <div className="text-xs mb-1">JAIPUR</div>
-            <div className="text-sm font-bold">JAN 10, 2026</div>
+            <div className="text-sm  ">JAN 10, 2026</div>
             <div className="text-xs mt-1">Pink City</div>
           </div>
         )
@@ -76,7 +76,7 @@ export const meetupSections = [
         content: (
           <div>
             <div className="text-xs mb-1">AHMEDABAD</div>
-            <div className="text-sm font-bold">JAN 25, 2026</div>
+            <div className="text-sm  ">JAN 25, 2026</div>
             <div className="text-xs mt-1">Sabarmati</div>
           </div>
         )
@@ -86,7 +86,7 @@ export const meetupSections = [
         content: (
           <div>
             <div className="text-xs mb-1">KOCHI</div>
-            <div className="text-sm font-bold">FEB 8, 2026</div>
+            <div className="text-sm  ">FEB 8, 2026</div>
             <div className="text-xs mt-1">Backwaters</div>
           </div>
         )
@@ -96,7 +96,7 @@ export const meetupSections = [
         content: (
           <div>
             <div className="text-xs mb-1">LUCKNOW</div>
-            <div className="text-sm font-bold">FEB 22, 2026</div>
+            <div className="text-sm  ">FEB 22, 2026</div>
             <div className="text-xs mt-1">Heritage City</div>
           </div>
         )
@@ -121,7 +121,7 @@ export const meetupSections = [
         content: (
           <div>
             <div className="text-xs mb-1">DELHI NCR</div>
-            <div className="text-sm font-bold">FEB 9, 2025</div>
+            <div className="text-sm  ">FEB 9, 2025</div>
             <div className="text-xs mt-1">50 Members</div>
           </div>
         )
@@ -131,7 +131,7 @@ export const meetupSections = [
         content: (
           <div>
             <div className="text-xs mb-1">AMRITSAR</div>
-            <div className="text-sm font-bold">MAR 15, 2025</div>
+            <div className="text-sm  ">MAR 15, 2025</div>
             <div className="text-xs mt-1">Golden Temple</div>
           </div>
         )
@@ -141,7 +141,7 @@ export const meetupSections = [
         content: (
           <div>
             <div className="text-xs mb-1">KOLKATA</div>
-            <div className="text-sm font-bold">APR 22, 2025</div>
+            <div className="text-sm  ">APR 22, 2025</div>
             <div className="text-xs mt-1">Cultural Meet</div>
           </div>
         )
@@ -151,7 +151,7 @@ export const meetupSections = [
         content: (
           <div>
             <div className="text-xs mb-1">CHENNAI</div>
-            <div className="text-sm font-bold">MAY 10, 2025</div>
+            <div className="text-sm  ">MAY 10, 2025</div>
             <div className="text-xs mt-1">Tech Connect</div>
           </div>
         )
@@ -161,7 +161,7 @@ export const meetupSections = [
         content: (
           <div>
             <div className="text-xs mb-1">MUMBAI</div>
-            <div className="text-sm font-bold">JAN 20, 2025</div>
+            <div className="text-sm  ">JAN 20, 2025</div>
             <div className="text-xs mt-1">Film City</div>
           </div>
         )
@@ -171,7 +171,7 @@ export const meetupSections = [
         content: (
           <div>
             <div className="text-xs mb-1">GOA</div>
-            <div className="text-sm font-bold">DEC 15, 2024</div>
+            <div className="text-sm  ">DEC 15, 2024</div>
             <div className="text-xs mt-1">Beach Meet</div>
           </div>
         )
@@ -181,7 +181,7 @@ export const meetupSections = [
         content: (
           <div>
             <div className="text-xs mb-1">BHOPAL</div>
-            <div className="text-sm font-bold">NOV 8, 2024</div>
+            <div className="text-sm  ">NOV 8, 2024</div>
             <div className="text-xs mt-1">Lake City</div>
           </div>
         )
@@ -191,7 +191,7 @@ export const meetupSections = [
         content: (
           <div>
             <div className="text-xs mb-1">CHANDIGARH</div>
-            <div className="text-sm font-bold">OCT 25, 2024</div>
+            <div className="text-sm  ">OCT 25, 2024</div>
             <div className="text-xs mt-1">Rock Garden</div>
           </div>
         )
@@ -201,7 +201,7 @@ export const meetupSections = [
         content: (
           <div>
             <div className="text-xs mb-1">VADODARA</div>
-            <div className="text-sm font-bold">SEP 18, 2024</div>
+            <div className="text-sm  ">SEP 18, 2024</div>
             <div className="text-xs mt-1">Palace Meet</div>
           </div>
         )
