@@ -20,6 +20,8 @@ const redwood = localFont({
 })
 
 
+// export const revalidate = 10;
+
 export default function RootLayout({ children }) {
   const pathname = usePathname();
 

@@ -9,7 +9,6 @@ export default async function KnowUs() {
     fetchWebOps(),
   ]);
 
-  console.log("uhcMembers", uhcMembers)
 
   return (
     <div
