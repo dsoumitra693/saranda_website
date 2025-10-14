@@ -17,23 +17,23 @@ const footerConfig = [
         iconLinks: [
             {
                 alt: "Instagram",
-                src: "https://www.instagram.com/saranda.iitm/",
+                src: "https://www.instagram.com/iitm_saranda",
                 icon: "/images/instagram.svg"
             },
             {
                 alt: "YouTube",
-                src: "https://www.facebook.com/saranda.iitm/",
+                src: "https://www.youtube.com/@saranda_iitm",
                 icon: "/images/youtube.svg"
             },
             {
                 alt: "WhatsApp",
-                src: "https://twitter.com/saranda_iitm",
+                src: "https://whatsapp.com/channel/0029Vb4vQKPB4hdNYxXcYC0j",
                 icon: "/images/whatsapp.svg",
                 size: 24
             },
             {
                 alt: "LinkedIn",
-                src: "https://www.linkedin.com/school/saranda-iitm/",
+                src: "https://linkedin.com/company/saranda-house",
                 icon: "/images/linkedin.svg"
             }
         ],
