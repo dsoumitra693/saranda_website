@@ -20,7 +20,7 @@ export default function Navbar() {
     const dropdownTimeoutRef = useRef(null);
 
     const socialLinks = [
-        { name: "WhatsApp", href: "/whatsapp", icon: "/images/whatsapp.svg" },
+        { name: "WhatsApp", href: "https://whatsapp.com/channel/0029Vb4vQKPB4hdNYxXcYC0j", icon: "/images/whatsapp.svg" },
         { name: "YouTube", href: "https://www.youtube.com/@saranda_iitm", icon: "/images/youtube.svg" },
         { name: "Instagram", href: "https://www.instagram.com/iitm_saranda", icon: "/images/instagram.svg" },
         { name: "LinkedIn", href: "https://www.linkedin.com/company/saranda-iitm", icon: "/images/linkedin.svg" },
