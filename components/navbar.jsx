@@ -395,6 +395,7 @@ export default function Navbar() {
                                 <li key={item.label}>
                                     <Link
                                         href={item.href}
+                                        onClick={() => setMobileMenuOpen(false)}
                                         className="block px-4 py-2 rounded-md text-neutral-light font-normal hover:bg-primary-lime hover:text-white"
                                     >
                                         <h2 className="relative z-10 font-[36px]">{item.label}</h2>
