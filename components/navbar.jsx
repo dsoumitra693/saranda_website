@@ -23,7 +23,7 @@ export default function Navbar() {
         { name: "WhatsApp", href: "https://whatsapp.com/channel/0029Vb4vQKPB4hdNYxXcYC0j", icon: "/images/whatsapp.svg" },
         { name: "YouTube", href: "https://www.youtube.com/@saranda_iitm", icon: "/images/youtube.svg" },
         { name: "Instagram", href: "https://www.instagram.com/iitm_saranda", icon: "/images/instagram.svg" },
-        { name: "LinkedIn", href: "https://www.linkedin.com/company/saranda-iitm", icon: "/images/linkedin.svg" },
+        { name: "LinkedIn", href: "https://linkedin.com/company/saranda-house", icon: "/images/linkedin.svg" },
     ];
     const navLinks = [
         { href: "/", label: "Home" },
